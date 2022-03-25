@@ -6,8 +6,15 @@
   box-shadow: none;
 }
 
-.text {
+.pending {
+  color: gray;
+}
+
+.correct {
   color: green;
-  text-justify: inter-word;
-  font-size: 20px;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
 }

@@ -1,17 +1,22 @@
 <div class="container">
   <div class="columns is-centered">
     <div class="box column is-one-third">
-      <h1 class="title has-text-centered">
-        {{ title }}
-      </h1>
-      <div class="card-content has-text-centered">
-        <div class="content text">{{ text }}</div>
+      <h1 class="title has-text-centered">Typing Challenge</h1>
+
+      <p class="has-text-centered">
+        <span
+          [class]="compare(letter, enteredText[i])"
+          *ngFor="let letter of randomText.split(''); let i = index"
+          >{{ letter }}</span
+        >
+      </p>
+
+      <div class="field">
+        <input class="input" #inputRef (input)="onInput(inputRef.value)" />
       </div>
-      <div class="card-content">
-        <input class="input is-info" type="text" #inputText />
-      </div>
-      <div class="card-content has-text-centered">
-        <div class="content">You win!</div>
+
+      <div *ngIf="randomText === enteredText" class="box has-text-centered">
+        <h1 class="title">Success!</h1>
       </div>
     </div>
   </div>

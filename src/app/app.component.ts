@@ -8,7 +8,18 @@ import faker from '@faker-js/faker';
 })
 export class AppComponent {
   title = 'Typing Challenge';
-  text = faker.lorem.sentence();
+  randomText = faker.lorem.sentence();
+  enteredText = '';
 
-  @Input() inputText: string = '';
+  compare(randomLetter: string, enteredLetter: string) {
+    if (!enteredLetter) {
+      return 'pending';
+    }
+    return randomLetter === enteredLetter ? 'correct' : 'incorrect';
+  }
+
+  onInput(value: string) {
+    this.enteredText = value;
+    console.log(this.enteredText);
+  }
 }
