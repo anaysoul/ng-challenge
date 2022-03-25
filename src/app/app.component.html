@@ -1,16 +1,18 @@
 <div class="container">
-  <div class="card">
-    <header class="card-header">
-      <p class="card-header-title">{{ title }}</p>
-    </header>
-    <div class="card-content">
-      <div class="content text">{{ text }}</div>
-    </div>
-    <div class="card-content">
-      <input class="input is-info" type="text" #inputText />
-    </div>
-    <div class="card-content">
-      <div class="content">You win!</div>
+  <div class="columns is-centered">
+    <div class="box column is-one-third">
+      <h1 class="title has-text-centered">
+        {{ title }}
+      </h1>
+      <div class="card-content has-text-centered">
+        <div class="content text">{{ text }}</div>
+      </div>
+      <div class="card-content">
+        <input class="input is-info" type="text" #inputText />
+      </div>
+      <div class="card-content has-text-centered">
+        <div class="content">You win!</div>
+      </div>
     </div>
   </div>
 </div>

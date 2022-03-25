@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import faker from '@faker-js/faker';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'Typing Challenge';
-  text = 'Lorem ipsum leo risus';
+  text = faker.lorem.sentence();
 
   @Input() inputText: string = '';
 }
