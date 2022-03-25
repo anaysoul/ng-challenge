@@ -1,0 +1,14 @@
+.container {
+  width: 300px;
+  margin-top: 50px;
+  align-content: center;
+}
+
+.card-header {
+  box-shadow: none;
+}
+
+.text {
+  color: green;
+  text-justify: inter-word;
+}
