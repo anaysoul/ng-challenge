@@ -10,6 +10,7 @@ export class AppComponent {
   @Input() inputName: string = '';
   @Input() inputDate: string = '';
   @Input() inputAmount: string = '';
+  @Input() inputHeight: number = 0;
 
   onNameChange(value: string) {
     this.inputName = value;
@@ -19,5 +20,8 @@ export class AppComponent {
   }
   onAmountChange(value: string) {
     this.inputAmount = value;
+  }
+  onHeightChange(value: number) {
+    this.inputHeight = value;
   }
 }

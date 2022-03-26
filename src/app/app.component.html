@@ -29,16 +29,28 @@
         #amount
         (input)="onAmountChange(amount.value)"
       />
+      <label for="height">Height</label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Height"
+        aria-label="Height"
+        #height
+        (input)="onHeightChange(+height.value)"
+      />
     </div>
     <div class="col">
       <label for="name"><strong>Receiver Name</strong></label>
       <div>{{ inputName | titlecase }}</div>
       <br />
-      <label for="name"><strong>Payment Date</strong></label>
+      <label for="paymentDate"><strong>Payment Date</strong></label>
       <div>{{ inputDate | date: "longDate" }}</div>
       <br />
-      <label for="name"><strong>Amount</strong></label>
+      <label for="amount"><strong>Amount</strong></label>
       <div>{{ inputAmount | currency }}</div>
+      <br />
+      <label for="height"><strong>Height</strong></label>
+      <div>{{ inputHeight | number: "1.1-2" }}</div>
     </div>
   </div>
 </div>
