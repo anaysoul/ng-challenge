@@ -13,7 +13,7 @@
       />
       <label for="payment">Payment Date</label>
       <input
-        type="text"
+        type="date"
         class="form-control"
         placeholder="Payment Date"
         aria-label="Payment Date"
@@ -30,12 +30,12 @@
         (input)="onAmountChange(amount.value)"
       />
     </div>
-    <div class="form-group col">
+    <div class="col">
       <label for="name"><strong>Receiver Name</strong></label>
       <div>{{ inputName | titlecase }}</div>
       <br />
       <label for="name"><strong>Payment Date</strong></label>
-      <div>{{ inputDate | date }}</div>
+      <div>{{ inputDate | date: "longDate" }}</div>
       <br />
       <label for="name"><strong>Amount</strong></label>
       <div>{{ inputAmount | currency }}</div>
