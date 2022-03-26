@@ -7,19 +7,17 @@ import faker from '@faker-js/faker';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Typing Challenge';
-  randomText = faker.lorem.sentence();
-  enteredText = '';
+  @Input() inputName: string = '';
+  @Input() inputDate: string = '';
+  @Input() inputAmount: string = '';
 
-  compare(randomLetter: string, enteredLetter: string) {
-    if (!enteredLetter) {
-      return 'pending';
-    }
-    return randomLetter === enteredLetter ? 'correct' : 'incorrect';
+  onNameChange(value: string) {
+    this.inputName = value;
   }
-
-  onInput(value: string) {
-    this.enteredText = value;
-    console.log(this.enteredText);
+  onDateChange(value: string) {
+    this.inputDate = value;
+  }
+  onAmountChange(value: string) {
+    this.inputAmount = value;
   }
 }

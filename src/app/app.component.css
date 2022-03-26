@@ -1,20 +1,6 @@
 .container {
   margin-top: 50px;
 }
-
-.card-header {
-  box-shadow: none;
-}
-
-.pending {
-  color: gray;
-}
-
-.correct {
-  color: green;
-}
-
-.incorrect {
-  color: red;
-  font-weight: bold;
+.recieved {
+  margin: 0 0 12px;
 }

@@ -1,23 +1,44 @@
 <div class="container">
-  <div class="columns is-centered">
-    <div class="box column is-one-third">
-      <h1 class="title has-text-centered">Typing Challenge</h1>
-
-      <p class="has-text-centered">
-        <span
-          [class]="compare(letter, enteredText[i])"
-          *ngFor="let letter of randomText.split(''); let i = index"
-          >{{ letter }}</span
-        >
-      </p>
-
-      <div class="field">
-        <input class="input" #inputRef (input)="onInput(inputRef.value)" />
-      </div>
-
-      <div *ngIf="randomText === enteredText" class="box has-text-centered">
-        <h1 class="title">Success!</h1>
-      </div>
+  <div class="row justify-content-center text-center">
+    <header class="title">Payment Form</header>
+    <div class="form-group col">
+      <label for="name">Receiver Name</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="First name"
+        aria-label="First name"
+        #name
+        (input)="onNameChange(name.value)"
+      />
+      <label for="payment">Payment Date</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Payment Date"
+        aria-label="Payment Date"
+        #paymentDate
+        (input)="onDateChange(paymentDate.value)"
+      />
+      <label for="amount">Amount</label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Amount"
+        aria-label="Amount"
+        #amount
+        (input)="onAmountChange(amount.value)"
+      />
+    </div>
+    <div class="form-group col">
+      <label for="name"><strong>Receiver Name</strong></label>
+      <div>{{ inputName | titlecase }}</div>
+      <br />
+      <label for="name"><strong>Payment Date</strong></label>
+      <div>{{ inputDate | date }}</div>
+      <br />
+      <label for="name"><strong>Amount</strong></label>
+      <div>{{ inputAmount | currency }}</div>
     </div>
   </div>
 </div>
