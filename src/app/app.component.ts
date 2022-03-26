@@ -11,6 +11,7 @@ export class AppComponent {
   @Input() inputDate: string = '';
   @Input() inputAmount: string = '';
   @Input() inputHeight: number = 0;
+  @Input() inputMiles: number = 0;
 
   onNameChange(value: string) {
     this.inputName = value;
@@ -23,5 +24,8 @@ export class AppComponent {
   }
   onHeightChange(value: number) {
     this.inputHeight = value;
+  }
+  onMilesChange(value: string) {
+    this.inputMiles = parseFloat(value);
   }
 }

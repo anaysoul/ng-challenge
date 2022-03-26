@@ -38,6 +38,14 @@
         #height
         (input)="onHeightChange(+height.value)"
       />
+      <label for="miles">Miles</label>
+      <input
+        class="form-control"
+        placeholder="miles"
+        aria-label="miles"
+        #miles
+        (input)="onMilesChange(miles.value)"
+      />
     </div>
     <div class="col">
       <label for="name"><strong>Receiver Name</strong></label>
@@ -51,6 +59,9 @@
       <br />
       <label for="height"><strong>Height</strong></label>
       <div>{{ inputHeight | number: "1.1-2" }}</div>
+      <br />
+      <label for="miles"><strong>Kilometers</strong></label>
+      <div>{{ inputMiles | convert }}</div>
     </div>
   </div>
 </div>
